@@ -63,7 +63,7 @@ export const onPasteCloud = (editor: any, e: React.ClipboardEvent): boolean => {
       const index = elements.findIndex((el: any) => el.type === "spinner");
 
       removeNodes(editor, {
-        at: [index],
+        at: [index == -1 ? 0 : index],
       });
       insertImage(editor, url);
     }
@@ -99,12 +99,10 @@ export const onDropCloud = (editor: any, e: React.DragEvent): boolean => {
         .then((response) => response.json())
         .then(async (data) => {
           const url = data.secure_url;
-          console.log(url);
 
           const x = getNode(editor, []);
           const elements: any = x?.children;
           const index = elements.findIndex((el: any) => el.type === "spinner");
-          console.log(index);
 
           removeNodes(editor, {
             at: [index == -1 ? 0 : index],
