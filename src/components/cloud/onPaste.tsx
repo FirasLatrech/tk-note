@@ -38,7 +38,6 @@ export const onPasteCloud = (editor: any, e: React.ClipboardEvent): boolean => {
           const x = getNode(editor, []);
           const elements: any = x?.children;
           const index = elements.findIndex((el: any) => el.type === "spinner");
-          console.log(index);
 
           removeNodes(editor, {
             at: [index],
