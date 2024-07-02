@@ -38,6 +38,7 @@ export const onPasteCloud = (editor: any, e: React.ClipboardEvent): boolean => {
           const x = getNode(editor, []);
           const elements: any = x?.children;
           const index = elements.findIndex((el: any) => el.type === "spinner");
+          console.log(index);
 
           removeNodes(editor, {
             at: [index],
@@ -91,7 +92,6 @@ export const onDropCloud = (editor: any, e: React.DragEvent): boolean => {
       fd.append("tags", "browser_upload");
       fd.append("file", file);
       insertSpinner(editor, {});
-
       fetch(url, {
         method: "POST",
         body: fd,
@@ -99,13 +99,15 @@ export const onDropCloud = (editor: any, e: React.DragEvent): boolean => {
         .then((response) => response.json())
         .then(async (data) => {
           const url = data.secure_url;
+          console.log(url);
 
           const x = getNode(editor, []);
           const elements: any = x?.children;
           const index = elements.findIndex((el: any) => el.type === "spinner");
+          console.log(index);
 
           removeNodes(editor, {
-            at: [index],
+            at: [index == -1 ? 0 : index],
           });
           await insertImage(editor, url);
         })
@@ -125,6 +127,7 @@ export const onDropCloud = (editor: any, e: React.DragEvent): boolean => {
       const x = getNode(editor, []);
       const elements: any = x?.children;
       const index = elements?.findIndex((el: any) => el?.type === "spinner");
+      console.log(index);
 
       removeNodes(editor, {
         at: [index],
