@@ -170,6 +170,7 @@ function App() {
             initialValue={initialValue}
             handelSelectedFile={handelSelectedFile}
             ref={editorRef}
+
             // onUpload={onUpload}
           />
         </div>
