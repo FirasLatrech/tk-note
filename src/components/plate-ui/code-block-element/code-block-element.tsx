@@ -19,17 +19,15 @@ export const CodeBlockElement = withRef<typeof PlateElement>(
           state.className,
           className
         )}
-        {...props}
-      >
-        <pre className="overflow-x-auto rounded-md bg-muted px-6 py-8 font-mono text-sm leading-[normal] [tab-size:2] ">
+        {...props}>
+        <pre className="overflow-x-auto rounded-md bg-muted px-6 py-8 font-mono text-sm leading-[normal] [tab-size:2] code-block ">
           <code>{children}</code>
         </pre>
 
         {state.syntax && (
           <div
-            className="absolute right-2 top-2 z-10 select-none"
-            contentEditable={false}
-          >
+            className="absolute z-10 select-none right-2 top-2"
+            contentEditable={false}>
             <CodeBlockCombobox />
           </div>
         )}

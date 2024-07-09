@@ -17,7 +17,7 @@ export const PopoverContent = withRef<typeof PopoverPrimitive.Content>(
         ref={ref}
         align={align}
         sideOffset={sideOffset}
-        className={cn(popoverVariants(), className)}
+        className={cn(popoverVariants(), className ,"edit-tabel-drop-down")}
         style={{ zIndex: 1000, ...style }}
         {...props}
       />

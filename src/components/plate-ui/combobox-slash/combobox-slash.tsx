@@ -39,14 +39,13 @@ export const ComboboxItem = withRef<"div", any>(
         ref={ref}
         className={`relative flex gap-2  min-w-[200px] cursor-pointer text-sm select-none items-center rounded-sm p-1   outline-none transition-colors hover:bg-accent  focus:text-gray-900   data-[highlighted=true]:bg-accent data-[highlighted=true]:text-accent-foreground ${slashItemClassName} `}
         {...props}
-        {...rest}
-      >
+        {...rest}>
         <img
-          className="w-12 h-12 border border-gray-200 rounded-md bg-white"
+          className="w-12 h-12 bg-white border border-gray-200 rounded-md"
           src={item.img}
           alt={item.text}
         />
-        <div className="flex flex-col  ">
+        <div className="flex flex-col ">
           <p>{item.text}</p>
           <p className="text-xs text-gray-500">{item.description}</p>
         </div>
@@ -118,8 +117,7 @@ export function ComboboxContent(
           className={cn(
             `z-[500] m-0 animate-fade max-h-[400px] w-[330px] overflow-y-auto rounded-md bg-popover dark:bg-[#191919] p-2  shadow-md flex flex-col gap-1 ${slashComponentClassName}`
           )}
-          onOpenAutoFocus={(event) => event.preventDefault()}
-        >
+          onOpenAutoFocus={(event) => event.preventDefault()}>
           {Component ? Component({ store: activeComboboxStore }) : null}
 
           {filteredItems.map((item, index) => (

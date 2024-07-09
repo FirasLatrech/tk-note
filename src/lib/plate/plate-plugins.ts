@@ -179,11 +179,11 @@ import { SLASH_RULES } from "./slashRules";
 import { createSlashArPlugin, ELEMENT_SLASH_AR_INPUT } from "./ar-slash";
 import { SlashInputArElement } from "../../components/plate-ui/slash-input-ar-elemnt/slash-input-ar-elemnt";
 
-import { createCloudPlugin } from "../../components/cloud/create-cloud-plugin";
 import createSpinnerPlugin, {
   ELEMENT_SPINNER,
   SpinnerElement,
 } from "../../components/plate-ui/spinner-element/spinner-element";
+import { createCloudPlugin } from "../../components/plate-ui/cloud/create-cloud-plugin";
 
 const resetBlockTypesCommonRule = {
   types: [ELEMENT_BLOCKQUOTE, ELEMENT_TODO_LI],

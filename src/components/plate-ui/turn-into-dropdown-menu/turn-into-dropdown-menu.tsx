@@ -106,20 +106,24 @@ export function TurnIntoDropdownMenu(props: DropdownMenuProps) {
   const { icon: SelectedItemIcon, label: selectedItemLabel } = selectedItem;
 
   return (
-    <DropdownMenu modal={false} {...openState} {...props}>
+    <DropdownMenu
+      modal={false}
+      {...openState}
+      {...props}>
       <DropdownMenuTrigger asChild>
         <ToolbarButton
           pressed={openState.open}
           tooltip="Turn into"
           isDropdown
-          className="lg:min-w-[130px]"
-        >
+          className="lg:min-w-[130px]">
           <SelectedItemIcon className="size-5 lg:hidden" />
           <span className="max-lg:hidden">{selectedItemLabel}</span>
         </ToolbarButton>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent align="start" className="min-w-0 !z-[9999999]">
+      <DropdownMenuContent
+        align="start"
+        className="min-w-0 !z-[9999999]">
         <DropdownMenuLabel>Turn into</DropdownMenuLabel>
 
         <DropdownMenuRadioGroup
@@ -143,14 +147,12 @@ export function TurnIntoDropdownMenu(props: DropdownMenuProps) {
 
             collapseSelection(editor);
             focusEditor(editor);
-          }}
-        >
+          }}>
           {items.map(({ value: itemValue, label, icon: Icon }) => (
             <DropdownMenuRadioItem
               key={itemValue}
               value={itemValue}
-              className="min-w-[180px]"
-            >
+              className="min-w-[180px]">
               <Icon className="mr-2 size-5" />
               {label}
             </DropdownMenuRadioItem>
