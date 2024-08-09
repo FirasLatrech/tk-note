@@ -21,29 +21,19 @@ import {
 import { createVirtualRef } from "@udecode/plate-floating";
 
 export const ComboboxItem = withRef<"div", any>(
-  (
-    {
-      combobox,
-      index,
-      item,
-      onRenderItem,
-      MentionComponentItem,
-      className,
-      ...rest
-    },
-    ref
-  ) => {
+  ({ combobox, index, item, onRenderItem, className, ...rest }, ref) => {
     const { props } = useComboboxItem({ item, index, combobox, onRenderItem });
-
+    console.log(props);
     return (
       <div
         ref={ref}
-        className={cn(
-          "relative flex h-9 cursor-pointer select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors",
-          "hover:bg-accent hover:text-accent-foreground data-[highlighted=true]:bg-accent data-[highlighted=true]:text-accent-foreground",
-          className
-        )}
-        {...props}
+        // className={cn(
+        //   "relative flex h-9 cursor-pointer select-none items-center rounded-sm px-2 py-1.5 text-sm transition-colors",
+        //   "hover:bg-accent hover:text-accent-foreground data-[highlighted=true]:bg-accent data-[highlighted=true]:text-accent-foreground",
+        //   className
+        // )}
+        onClick={props?.onMouseDown}
+        // {...props}
         {...rest}
       >
         <p>{item.text}</p>

@@ -831,10 +831,6 @@ video {
   margin-right: -0.75rem;
 }
 
-.mb-1 {
-  margin-bottom: 0.25rem;
-}
-
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -847,8 +843,16 @@ video {
   margin-bottom: 1rem;
 }
 
-.mb-px {
-  margin-bottom: 1px;
+.mb-\[12px\] {
+  margin-bottom: 12px;
+}
+
+.mb-\[20px\] {
+  margin-bottom: 20px;
+}
+
+.mb-\[28px\] {
+  margin-bottom: 28px;
 }
 
 .ml-0 {
@@ -2035,11 +2039,6 @@ video {
   line-height: 2.25rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
 .text-\[1\.1em\] {
   font-size: 1.1em;
 }
@@ -2054,6 +2053,18 @@ video {
 
 .text-\[1\.875em\] {
   font-size: 1.875em;
+}
+
+.text-\[18px\] {
+  font-size: 18px;
+}
+
+.text-\[36px\] {
+  font-size: 36px;
+}
+
+.text-\[44px\] {
+  font-size: 44px;
 }
 
 .text-base {
@@ -2214,10 +2225,6 @@ video {
   text-decoration-line: line-through;
 }
 
-.decoration-primary {
-  text-decoration-color: hsl(var(--primary));
-}
-
 .decoration-blue-300 {
   text-decoration-color: #93c5fd;
 }
@@ -2343,6 +2350,12 @@ video {
   transition-duration: 150ms;
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-colors {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -2361,18 +2374,8 @@ video {
   transition-duration: 150ms;
 }
 
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .duration-200 {
   transition-duration: 200ms;
-}
-
-.duration-300 {
-  transition-duration: 300ms;
 }
 
 @keyframes enter {
@@ -2391,10 +2394,6 @@ video {
 
 .duration-200 {
   animation-duration: 200ms;
-}
-
-.duration-300 {
-  animation-duration: 300ms;
 }
 
 .\[contain\:content\] {

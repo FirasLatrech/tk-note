@@ -299,7 +299,7 @@ export const plugins = createPlugins(
       inject: {
         props: {
           defaultNodeValue: 1.5,
-          validNodeValues: [1, 1.2, 1.5, 2, 3],
+          validNodeValues: [1, 1.2, 1.4, 1.6, 1.8, 2, 3],
           validTypes: [ELEMENT_PARAGRAPH, ELEMENT_H1, ELEMENT_H2, ELEMENT_H3],
         },
       },

@@ -28,6 +28,7 @@ import createNewPlugins from "../lib/plate/createPlugin";
 
 type SoftyEditor = {
   initialValue: any;
+  value?: any;
   onChange?: (e: any) => void;
   readOnly?: boolean;
   editorClassName?: string;
@@ -52,6 +53,7 @@ const SoftyNote = memo(
       {
         onChange,
         initialValue,
+        value,
         readOnly,
         editorClassName,
         onUpload,
@@ -82,6 +84,7 @@ const SoftyNote = memo(
             <Plate
               plugins={plugins_v2}
               initialValue={initialValue}
+              value={value}
               onChange={onChange}
               readOnly={readOnly}
             >

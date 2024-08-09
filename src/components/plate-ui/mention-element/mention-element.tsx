@@ -21,7 +21,7 @@ export const MentionElement = withRef<
     <PlateElement
       ref={ref}
       className={cn(
-        "inline-block text-blue-500 cursor-pointer rounded-md px-1.5 py-0.5 align-baseline text-sm font-medium",
+        "inline-block select-none text-blue-500 cursor-pointer rounded-md px-1.5 py-0.5 align-baseline text-sm font-medium",
         element.children[0].bold === true && "font-bold",
         element.children[0].italic === true && "italic",
         element.children[0].underline === true && "underline",
@@ -33,10 +33,12 @@ export const MentionElement = withRef<
       {...props}
     >
       {isUrl(props.element.link) ? (
-        <a href={props.element.link as string} target="_blank">
-          @{renderLabel ? renderLabel(element) : element.value}
-          {children}
-        </a>
+        <div>
+          <a href={props.element.link as string} target="_blank">
+            @{renderLabel ? renderLabel(element) : element.value}
+            {children}
+          </a>
+        </div>
       ) : (
         <>
           @{renderLabel ? renderLabel(element) : element.value}

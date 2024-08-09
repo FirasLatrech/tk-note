@@ -1,8 +1,9 @@
 {
+  "homepage": "https://softy-note.vercel.app/",
   "name": "tk-note",
   "author": "thabet kh",
   "private": false,
-  "version": "1.8.7",
+  "version": "1.9.1",
   "type": "module",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
